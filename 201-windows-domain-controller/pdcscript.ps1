@@ -13,3 +13,4 @@ if ($LastExitCode -ne 0)
     "exit code configuring reverse zone ($args[0]) was non-zero ($LastExitCode), bailing..."
     exit $LastExitCode
 }
+Set-DnsServerScavenging -ScavengingState $true -RefreshInterval "7" -NoRefreshInterval "7" -ApplyOnAllZones 
